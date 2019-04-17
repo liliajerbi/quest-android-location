@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-
+                tvLocation.append("Update location : " + "\n" + location.toString() + "\n" );
             }
 
             @Override
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(Location location) {
                 // Got last known location. In some rare situations this can be null.
-                tvLocation.append("Update location : " + "\n" + location.toString() + "\n");
+
                 if (location != null) {
                     // Logic to handle location object
-                    tvLocation.append("Last location : " + "\n" + location.toString());
+                    tvLocation.append("Last location : " + "\n" + location.toString()+ "\n");
                 }
             }
         });
